@@ -1,0 +1,17 @@
+<label><b>Results:</b></label>
+
+<table border=1 *ngIf='countries != null'>
+	<thead>
+		<tr>
+			<td><b>Country Name</b></td>
+			<td><b>Country Code</b></td>
+		</tr>
+	</thead>
+
+	<tr *ngFor='let country of countries'>
+		<td>{{country.name}}</td>
+		<td>{{country.code}}</td>
+	</tr>
+</table>
+
+<p *ngIf='countries == null'>No Country found for the Search query.</p>
